@@ -11,6 +11,8 @@ import {
   DrawerHeader,
   DrawerTrigger,
   Drawer,
+  DrawerTitle,
+  DrawerDescription,
 } from "./ui/drawer";
 import { Menu } from "lucide-react";
 import { Button } from "./ui/button";
@@ -51,12 +53,12 @@ export const NavBar = () => {
           </DrawerTrigger>
           <DrawerContent className="py-8 px-2">
             <DrawerHeader>
-              {/* <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+              <DrawerTitle>Link Options</DrawerTitle>
               <DrawerDescription>
                 This action cannot be undone.
-              </DrawerDescription> */}
+              </DrawerDescription>
               {LINKS.map((link, idx) => (
-                <DrawerClose key={idx} asChild>
+                <DrawerClose key={idx} asChild className="text-center">
                   <Link
                     href={link.href}
                     className={cn(

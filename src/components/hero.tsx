@@ -11,6 +11,7 @@ export default function Hero() {
         <div className="flex flex-col items-center space-y-4 lg:space-y-0 lg:flex-row m-8 lg:m-0 p-4 lg:justify-center lg:space-x-8">
           <div className="lg:w-1/2 bg-white rounded-lg shadow-xl">
             <Image
+              priority
               src="https://images.unsplash.com/photo-1499914485622-a88fac536970?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               width={6000}
               height={4000}
