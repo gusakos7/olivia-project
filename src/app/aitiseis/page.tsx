@@ -10,7 +10,7 @@ export default function AitiseisPage() {
           Εδώ οι καλές οι αιτήσεις
         </h1>
         {/* Cards Containers */}
-        <section className="p-8 mt-12 flex justify-between">
+        <section className="p-8 mt-12 flex justify-between space-x-4">
           <CardWithForm />
           <CalendarDemo />
         </section>

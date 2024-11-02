@@ -7,7 +7,7 @@ export default function Home() {
     <div className="flex flex-col">
       <Hero />
       <Details />
-      <div className="container mx-auto px-2 lg:px-12 flex lg:flex-row flex-col space-y-0 lg:space-x-4 lg:space-y-0 my-12 ">
+      <div className="container mx-auto px-2 lg:px-12 flex flex-col space-y-12  lg:flex-row lg:space-x-4 lg:space-y-0 my-12 ">
         <AccordionDemo />
         <AccordionDemo />
       </div>
