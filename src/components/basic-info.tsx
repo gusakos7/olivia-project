@@ -8,7 +8,7 @@ export const BasicInfo = () => {
     <>
       <motion.div
         style={{ scaleX: scrollYProgress }}
-        className="fixed top-0 left-0 right-0 h-2 bg-blue-600 origin-left"
+        className="fixed top-0 left-0 right-0 h-2 bg-blue-600 origin-left z-10"
       />
       <div className="bg-blue-600 text-sm ">
         <section className="container mx-auto px-2 space-x-8 sm:space-x-0 lg:px-12 flex justify-center sm:justify-between py-1 ">
