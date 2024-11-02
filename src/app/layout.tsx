@@ -1,16 +1,14 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import { Roboto_Flex } from "next/font/google";
+import { BasicInfo } from "@/components/basic-info";
+import { NavBar } from "@/components/nav-bar";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+import "./globals.css";
+import { Footer } from "@/components/footer";
+
+const robotoFlex = Roboto_Flex({
+  subsets: ["greek", "latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -25,10 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${robotoFlex.className} antialiased`}>
+        <div className="flex flex-col justify-between min-h-screen">
+          <div>
+            <BasicInfo />
+            <NavBar />
+            {children}
+          </div>
+          <Footer />
+        </div>
       </body>
     </html>
   );
