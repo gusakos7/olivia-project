@@ -1,13 +1,24 @@
 import Image from "next/image";
 import React from "react";
+import * as motion from "framer-motion/client";
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-r from-blue-500 to-blue-700 rounded-[5%] ">
+    <motion.section
+      className="bg-gradient-to-r from-blue-500 to-blue-700 rounded-[5%] "
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.1 }}
+    >
       <div className="container mx-auto px-2 lg:px-12 flex flex-col space-y-8 items-center p-16">
-        <h2 className="text-white text-lg md:text-3xl font-bold lg:text-5xl text-center ">
+        <motion.h2
+          className="text-white text-lg md:text-3xl font-bold lg:text-5xl text-center"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.25 }}
+        >
           Υπηρεσίες προς Ενδιαφερόμενους για τον ΑΣΕΠ
-        </h2>
+        </motion.h2>
         <div className="flex flex-col items-center space-y-4 lg:space-y-0 lg:flex-row m-8 lg:m-0 p-4 lg:justify-center lg:space-x-8">
           <div className="lg:w-1/2 bg-white rounded-lg shadow-xl">
             <Image
@@ -35,6 +46,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
