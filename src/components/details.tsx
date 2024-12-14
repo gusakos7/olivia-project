@@ -1,6 +1,9 @@
+import { PageWrapper } from "./page-wrapper";
+
 export default function Details() {
   return (
-    <section id="details" className="container mx-auto px-2 lg:px-12 my-12  ">
+    <PageWrapper className="my-12">
+      {/* <section id="details" className="container mx-auto px-2 lg:px-12 my-12"> */}
       <div className="my-12 flex flex-col items-center space-y-8 mb-20">
         <h3 className="text-xl lg:text-4xl font-bold text-[#242525] text-center">
           Επιλέξτε τις υπηρεσίες μας ώστε να είστε σωστά προετοιμασμένοι για το
@@ -24,6 +27,7 @@ export default function Details() {
         cumque, quas, debitis provident expedita? Aut quas quisquam nostrum
         sapiente a?
       </div>
-    </section>
+      {/* </section> */}
+    </PageWrapper>
   );
 }

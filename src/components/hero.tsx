@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import * as motion from "framer-motion/client";
+import { PageWrapper } from "./page-wrapper";
 
 export default function Hero() {
   return (
@@ -10,7 +11,8 @@ export default function Hero() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.1 }}
     >
-      <div className="container mx-auto px-2 lg:px-12 flex flex-col space-y-8 items-center p-16">
+      <PageWrapper className="flex flex-col space-y-8 items-center p-16">
+        {/* <div className="container mx-auto px-2 lg:px-12 flex flex-col space-y-8 items-center p-16"> */}
         <motion.h2
           className="text-white text-lg md:text-3xl font-bold lg:text-5xl text-center"
           initial={{ opacity: 0, y: 15 }}
@@ -45,7 +47,8 @@ export default function Hero() {
             </p>
           </div>
         </div>
-      </div>
+        {/* </div> */}
+      </PageWrapper>
     </motion.section>
   );
 }
